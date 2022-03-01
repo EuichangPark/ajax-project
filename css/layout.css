@@ -1,39 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Tomorrow:wght@300&display=swap");
-
-body {
-  font-family: Tomorrow, sans-serif;
+/* .hidden {
+  display: none !important;
 }
 
-.header {
+.container {
+  max-width: 575px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.row {
   display: flex;
-  background-color: #cbe6ff;
+  flex-wrap: wrap;
 }
 
-h1 {
-  margin-left: 5rem;
-  margin-right: 2rem;
+.column-full,
+.column-half {
+  width: 100%;
 }
 
-ul {
-  display: flex;
-}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 900px;
+  }
 
-.nav-item {
-  text-decoration: none;
-  list-style-type: none;
-  margin-top: 1rem;
-  margin-left: 2rem;
-}
+  .column-full,
+  .column-half {
+    padding: 0 0.75rem;
+  }
 
-.interval-images {
-  display: flex;
-  justify-content: center;
+  .column-half {
+    width: 50%;
+  }
 }
-
-img {
-  width: 500px;
-  margin-top: 5rem;
-  padding: 15px;
-  background-clip: padding-box;
-  background-color: #cbe6ff;
-}
+*/

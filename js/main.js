@@ -13,9 +13,15 @@ var $intervalImgDiv = document.querySelector('.interval-images');
 var $intervalImg = document.createElement('img');
 $intervalImgDiv.appendChild($intervalImg);
 
-setInterval(nextImage, 3000);
+setInterval(nextImage, 4000);
 var randomInt = Math.floor(Math.random() * 209) + 1;
 function nextImage() {
   $intervalImg.setAttribute('src', imageSrcArray[randomInt]);
   randomInt++;
+}
+
+var $favorites = document.querySelector('h1');
+$favorites.addEventListener('click', searchNav);
+function searchNav(event) {
+
 }
