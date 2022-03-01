@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:wght@300&display=swap");
+
+body {
+  font-family: Tomorrow, sans-serif;
+}
+
+.header {
+  display: flex;
+  background-color: #cbe6ff;
+}
+
+h1 {
+  margin-left: 5rem;
+  margin-right: 2rem;
+}
+
+ul {
+  display: flex;
+}
+
+.nav-item {
+  text-decoration: none;
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.interval-images {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 500px;
+  margin-top: 5rem;
+  padding: 15px;
+  background-clip: padding-box;
+  background-color: #cbe6ff;
+}
