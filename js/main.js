@@ -13,15 +13,20 @@ var $intervalImgDiv = document.querySelector('.interval-images');
 var $intervalImg = document.createElement('img');
 $intervalImgDiv.appendChild($intervalImg);
 
-setInterval(nextImage, 4000);
+var intervalID = setInterval(nextImage, 3000);
 var randomInt = Math.floor(Math.random() * 209) + 1;
 function nextImage() {
   $intervalImg.setAttribute('src', imageSrcArray[randomInt]);
   randomInt++;
+  if ($intervalImgDiv.className === 'hidden') {
+    clearInterval(intervalID);
+  }
 }
 
-var $favorites = document.querySelector('h1');
-$favorites.addEventListener('click', searchNav);
+var $searchNavbar = document.querySelector('#search-nav');
+var $searchBox = document.querySelector('.search-box');
+$searchNavbar.addEventListener('click', searchNav);
 function searchNav(event) {
-
+  $intervalImgDiv.className = 'hidden';
+  $searchBox.className = 'search-box';
 }
