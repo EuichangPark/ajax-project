@@ -42,11 +42,13 @@ var $inLibraryDiv = document.querySelector('.in-library');
 var $iconBtn = document.querySelector('#search-icon');
 $iconBtn.addEventListener('click', initiateSearch);
 function initiateSearch(event) {
+  var matchFound = false;
   $valueOfSearch = document.querySelector('#search-area').value;
   for (var i = 0; i < nameArray.length; i++) {
     if ($valueOfSearch.toLowerCase() === nameArray[i].toLowerCase()) {
+      matchFound = true;
       var searchResult = document.querySelector('.search-img-result');
-      if (!searchResult) {
+      if (!searchResult && (matchFound === true)) {
         var $digimonName = document.createElement('h3');
         $digimonName.textContent = nameArray[i];
         $inLibraryDiv.appendChild($digimonName);
@@ -58,10 +60,10 @@ function initiateSearch(event) {
         $digimonLevel.textContent = levelArray[i];
         $inLibraryDiv.appendChild($digimonLevel);
       }
-    } else {
-      $intervalImgDiv.className = 'hidden';
-      $noMessage.className = 'not-in-library';
-
     }
+  }
+  if (matchFound === false) {
+    $intervalImgDiv.className = 'hidden';
+    $noMessage.className = 'not-in-library';
   }
 }
