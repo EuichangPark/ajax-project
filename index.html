@@ -21,15 +21,24 @@
     </div>
   </header>
 
-  <main>
-    <div class="interval-images">
+  <main class="container">
+    <div class="row interval-images">
 
     </div>
-    <div class="search-box hidden" data-view="view">
-      <input id="search-area" type="text" placeholder="Search by Digimon Name">
-      <div class="icon-background">
-        <i class="fas fa-search"></i>
+
+    <div class="row not-in-library view hidden">
+      <h2 class="no-message">Searched Digimon doesn't exist. Search again.</h2>
+    </div>
+
+    <div class="row search-box hidden">
+      <input id="search-area" type="text" placeholder="Search by Digimon Name"/>
+      <div class="icon-background search-button">
+        <i id="search-icon" class="fas fa-search"></i>
       </div>
+    </div>
+
+    <div class="row in-library view">
+
     </div>
   </main>
 
