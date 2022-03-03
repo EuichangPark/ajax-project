@@ -40,8 +40,11 @@ function searchNav(event) {
 
 function nextSearch() {
   var $domInLibrary = document.querySelector('.in-library');
-  if ($inLibraryDiv.length !== 0) {
+  if ($domInLibrary && ($domInLibrary.children.length !== 0)) {
     $domInLibrary.innerHTML = '';
+  } else if (!$domInLibrary && ($noMessage.className === 'not-in-library')) {
+    $noMessage.className = 'hidden';
+    $inLibraryDiv.className = 'in-library';
   }
 }
 
