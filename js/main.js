@@ -38,10 +38,18 @@ function searchNav(event) {
   $searchBox.className = 'search-box';
 }
 
+function nextSearch() {
+  var $domInLibrary = document.querySelector('.in-library');
+  if ($inLibraryDiv.length !== 0) {
+    $domInLibrary.innerHTML = '';
+  }
+}
+
 var $inLibraryDiv = document.querySelector('.in-library');
 var $iconBtn = document.querySelector('#search-icon');
 $iconBtn.addEventListener('click', initiateSearch);
 function initiateSearch(event) {
+  nextSearch();
   var matchFound = false;
   $valueOfSearch = document.querySelector('#search-area').value;
   for (var i = 0; i < nameArray.length; i++) {
@@ -65,5 +73,7 @@ function initiateSearch(event) {
   if (matchFound === false) {
     $intervalImgDiv.className = 'hidden';
     $noMessage.className = 'not-in-library';
+    $inLibraryDiv.className = 'hidden';
   }
 }
+/* after serach is done search result stays but search box shows placeholder again. */
