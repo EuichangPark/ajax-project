@@ -41,3 +41,39 @@
 .container {
   justify-content: center;
 }
+
+@media screen and (max-width: 378px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .not-in-library {
+    text-align: center;
+  }
+
+  .in-library {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-img-result {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 379px) {
+  .hamburger-menu {
+    display: none;
+  }
+}

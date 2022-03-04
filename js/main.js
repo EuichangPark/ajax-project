@@ -79,4 +79,3 @@ function initiateSearch(event) {
     $inLibraryDiv.className = 'hidden';
   }
 }
-/* after serach is done search result stays but search box shows placeholder again. */
