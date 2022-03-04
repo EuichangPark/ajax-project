@@ -36,6 +36,7 @@ $searchNavbar.addEventListener('click', searchNav);
 function searchNav(event) {
   $intervalImgDiv.className = 'hidden';
   $searchBox.className = 'search-box';
+  $levels.className = 'level';
 }
 
 function nextSearch() {
@@ -77,5 +78,39 @@ function initiateSearch(event) {
     $intervalImgDiv.className = 'hidden';
     $noMessage.className = 'not-in-library';
     $inLibraryDiv.className = 'hidden';
+  }
+}
+
+var $hamburgerBtn = document.getElementById('hamburger-button');
+$hamburgerBtn.addEventListener('click', navbarExpansion);
+function navbarExpansion(event) {
+  var $slideMenu = document.querySelector('.slide-menu');
+  $slideMenu.className = 'slide-menu view';
+}
+
+var $hamSearch = document.getElementById('ham-search');
+$hamSearch.addEventListener('click', searchBox);
+var $levels = document.querySelector('.level');
+function searchBox() {
+  $searchBox.className = 'search-box';
+  $intervalImgDiv.className = 'hidden';
+  $levels.className = 'level';
+}
+
+var $inTraining = document.getElementById('in-training');
+$inTraining.addEventListener('click', viewInTrainings);
+function viewInTrainings() {
+  for (var i = 0; i < levelArray.length; i++) {
+    if (levelArray[i] === 'In Training') {
+      var $digimonName = document.createElement('h3');
+      $digimonName.textContent = nameArray[i];
+      $inLibraryDiv.appendChild($digimonName);
+      var $inLibraryImg = document.createElement('img');
+      $inLibraryImg.setAttribute('src', imageSrcArray[i]);
+      $inLibraryDiv.appendChild($inLibraryImg);
+      var $digimonLevel = document.createElement('h3');
+      $digimonLevel.textContent = levelArray[i];
+      $inLibraryDiv.appendChild($digimonLevel);
+    }
   }
 }

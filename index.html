@@ -21,8 +21,19 @@
     </div>
 
     <div class="hamburger-menu">
-      <i id="hamburger" class="fas fa-bars "></i>
+      <button type="button" id="hamburger-button">
+        <i id="hamburger" class="fas fa-bars "></i>
+      </button>
     </div>
+
+    <div class="slide-menu hidden view">
+      <ul>
+        <li class="menu-item">Favorites</li>
+        <li class="menu-item" id="ham-search">Search</li>
+      </ul>
+    </div>
+
+
   </header>
 
   <main>
@@ -42,6 +53,14 @@
             <i class="fas fa-search mag-glass"></i>
           </button>
         </div>
+      </div>
+
+      <div class="level hidden">
+        <button class="level-btn">In Training</button>
+        <button class="level-btn">Rookie</button>
+        <button class="level-btn">Champion</button>
+        <button class="level-btn">Ultimate</button>
+        <button class="level-btn">Mega</button>
       </div>
 
       <div class="row in-library">
