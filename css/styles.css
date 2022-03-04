@@ -56,6 +56,7 @@ li:hover {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+  font-size: 19px;
 }
 
 #search-area {
@@ -78,11 +79,16 @@ li:hover {
 }
 
 #search-icon {
-  margin-left: 7px;
-  margin-top: 7px;
+  background-color: #043d94;
+  color: azure;
+  max-width: 100%;
+  border-radius: 50%;
+  border-color: #043d94;
+  margin-left: 0.5rem;
+  font-size: 19px;
 }
 
-#search-icon:hover {
+button:hover {
   cursor: pointer;
 }
 
