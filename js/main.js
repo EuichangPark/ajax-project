@@ -97,7 +97,7 @@ function searchBox() {
   $levels.className = 'level';
 }
 
-var $inTraining = document.getElementById('in-training');
+var $inTraining = document.querySelector('#in-training');
 $inTraining.addEventListener('click', viewInTrainings);
 function viewInTrainings() {
   for (var i = 0; i < levelArray.length; i++) {
@@ -108,9 +108,66 @@ function viewInTrainings() {
       var $inLibraryImg = document.createElement('img');
       $inLibraryImg.setAttribute('src', imageSrcArray[i]);
       $inLibraryDiv.appendChild($inLibraryImg);
-      var $digimonLevel = document.createElement('h3');
-      $digimonLevel.textContent = levelArray[i];
-      $inLibraryDiv.appendChild($digimonLevel);
+    }
+  }
+}
+
+var $rookie = document.querySelector('#rookie');
+$rookie.addEventListener('click', viewRookies);
+function viewRookies() {
+  for (var i = 0; i < levelArray.length; i++) {
+    if (levelArray[i] === 'Rookie') {
+      var $digimonName = document.createElement('h3');
+      $digimonName.textContent = nameArray[i];
+      $inLibraryDiv.appendChild($digimonName);
+      var $inLibraryImg = document.createElement('img');
+      $inLibraryImg.setAttribute('src', imageSrcArray[i]);
+      $inLibraryDiv.appendChild($inLibraryImg);
+    }
+  }
+}
+
+var $champion = document.querySelector('#champion');
+$champion.addEventListener('click', viewChampions);
+function viewChampions() {
+  for (var i = 0; i < levelArray.length; i++) {
+    if (levelArray[i] === 'Champion') {
+      var $digimonName = document.createElement('h3');
+      $digimonName.textContent = nameArray[i];
+      $inLibraryDiv.appendChild($digimonName);
+      var $inLibraryImg = document.createElement('img');
+      $inLibraryImg.setAttribute('src', imageSrcArray[i]);
+      $inLibraryDiv.appendChild($inLibraryImg);
+    }
+  }
+}
+
+var $ultimate = document.querySelector('#ultimate');
+$ultimate.addEventListener('click', viewUltimates);
+function viewUltimates() {
+  for (var i = 0; i < levelArray.length; i++) {
+    if (levelArray[i] === 'Ultimate') {
+      var $digimonName = document.createElement('h3');
+      $digimonName.textContent = nameArray[i];
+      $inLibraryDiv.appendChild($digimonName);
+      var $inLibraryImg = document.createElement('img');
+      $inLibraryImg.setAttribute('src', imageSrcArray[i]);
+      $inLibraryDiv.appendChild($inLibraryImg);
+    }
+  }
+}
+
+var $mega = document.querySelector('#mega');
+$mega.addEventListener('click', viewMegas);
+function viewMegas() {
+  for (var i = 0; i < levelArray.length; i++) {
+    if (levelArray[i] === 'Mega') {
+      var $digimonName = document.createElement('h3');
+      $digimonName.textContent = nameArray[i];
+      $inLibraryDiv.appendChild($digimonName);
+      var $inLibraryImg = document.createElement('img');
+      $inLibraryImg.setAttribute('src', imageSrcArray[i]);
+      $inLibraryDiv.appendChild($inLibraryImg);
     }
   }
 }
