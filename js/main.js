@@ -108,6 +108,9 @@ function viewInTrainings() {
       var $inLibraryImg = document.createElement('img');
       $inLibraryImg.setAttribute('src', imageSrcArray[i]);
       $inLibraryDiv.appendChild($inLibraryImg);
+      var $digimonLevel = document.createElement('h3');
+      $digimonLevel.textContent = levelArray[i];
+      $inLibraryDiv.appendChild($digimonLevel);
     }
   }
 }
@@ -123,6 +126,9 @@ function viewRookies() {
       var $inLibraryImg = document.createElement('img');
       $inLibraryImg.setAttribute('src', imageSrcArray[i]);
       $inLibraryDiv.appendChild($inLibraryImg);
+      var $digimonLevel = document.createElement('h3');
+      $digimonLevel.textContent = levelArray[i];
+      $inLibraryDiv.appendChild($digimonLevel);
     }
   }
 }
@@ -138,6 +144,9 @@ function viewChampions() {
       var $inLibraryImg = document.createElement('img');
       $inLibraryImg.setAttribute('src', imageSrcArray[i]);
       $inLibraryDiv.appendChild($inLibraryImg);
+      var $digimonLevel = document.createElement('h3');
+      $digimonLevel.textContent = levelArray[i];
+      $inLibraryDiv.appendChild($digimonLevel);
     }
   }
 }
@@ -153,6 +162,9 @@ function viewUltimates() {
       var $inLibraryImg = document.createElement('img');
       $inLibraryImg.setAttribute('src', imageSrcArray[i]);
       $inLibraryDiv.appendChild($inLibraryImg);
+      var $digimonLevel = document.createElement('h3');
+      $digimonLevel.textContent = levelArray[i];
+      $inLibraryDiv.appendChild($digimonLevel);
     }
   }
 }
@@ -168,6 +180,9 @@ function viewMegas() {
       var $inLibraryImg = document.createElement('img');
       $inLibraryImg.setAttribute('src', imageSrcArray[i]);
       $inLibraryDiv.appendChild($inLibraryImg);
+      var $digimonLevel = document.createElement('h3');
+      $digimonLevel.textContent = levelArray[i];
+      $inLibraryDiv.appendChild($digimonLevel);
     }
   }
 }

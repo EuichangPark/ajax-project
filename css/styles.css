@@ -149,3 +149,19 @@ button:hover {
   color: #043d94;
   font-weight: 900;
 }
+
+.empty-favorites {
+  display: flex;
+  justify-content: center;
+}
+
+.add-button {
+  background-color: #043d94;
+  color: #cbe6ff;
+  border-radius: 3px;
+}
+
+.add-button:hover {
+  background-color: #cbe6ff;
+  color: #043d94;
+}
