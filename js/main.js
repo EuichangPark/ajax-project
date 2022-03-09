@@ -51,6 +51,7 @@ function nextSearch() {
 
 var $inLibraryDiv = document.querySelector('.in-library');
 var $iconBtn = document.querySelector('#search-icon');
+var $addBtn = document.querySelector('.addition-button');
 $iconBtn.addEventListener('click', initiateSearch);
 function initiateSearch(event) {
   nextSearch();
@@ -71,6 +72,8 @@ function initiateSearch(event) {
         var $digimonLevel = document.createElement('h3');
         $digimonLevel.textContent = levelArray[i];
         $inLibraryDiv.appendChild($digimonLevel);
+        $addBtn.className = 'addition-button view';
+        $inLibraryDiv.appendChild($addBtn);
       }
     }
   }
@@ -111,6 +114,8 @@ function viewInTrainings() {
       var $digimonLevel = document.createElement('h3');
       $digimonLevel.textContent = levelArray[i];
       $inLibraryDiv.appendChild($digimonLevel);
+      $addBtn.className = 'addition-button view';
+      $inLibraryDiv.appendChild($addBtn);
     }
   }
 }
@@ -129,6 +134,8 @@ function viewRookies() {
       var $digimonLevel = document.createElement('h3');
       $digimonLevel.textContent = levelArray[i];
       $inLibraryDiv.appendChild($digimonLevel);
+      $addBtn.className = 'addition-button view';
+      $inLibraryDiv.appendChild($addBtn);
     }
   }
 }
@@ -147,6 +154,8 @@ function viewChampions() {
       var $digimonLevel = document.createElement('h3');
       $digimonLevel.textContent = levelArray[i];
       $inLibraryDiv.appendChild($digimonLevel);
+      $addBtn.className = 'addition-button view';
+      $inLibraryDiv.appendChild($addBtn);
     }
   }
 }
@@ -165,6 +174,8 @@ function viewUltimates() {
       var $digimonLevel = document.createElement('h3');
       $digimonLevel.textContent = levelArray[i];
       $inLibraryDiv.appendChild($digimonLevel);
+      $addBtn.className = 'addition-button view';
+      $inLibraryDiv.appendChild($addBtn);
     }
   }
 }
@@ -183,6 +194,23 @@ function viewMegas() {
       var $digimonLevel = document.createElement('h3');
       $digimonLevel.textContent = levelArray[i];
       $inLibraryDiv.appendChild($digimonLevel);
+      $addBtn.className = 'addition-button view';
+      $inLibraryDiv.appendChild($addBtn);
     }
   }
+}
+
+var $add = document.querySelector('.add-button');
+var $favorites = document.querySelector('#favorites-nav');
+var $emptyList = document.querySelector('.empty-favorites');
+$favorites.addEventListener('click', viewFavorites);
+function viewFavorites() {
+  $intervalImgDiv.className = 'hidden';
+  $searchBox.className = 'hidden';
+  $levels.className = 'hidden';
+  $emptyList.className = '.empty-favorites';
+}
+$add.addEventListener('click', renderDigimon);
+function renderDigimon() {
+
 }
