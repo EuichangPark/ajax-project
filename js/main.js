@@ -46,14 +46,17 @@ function nextSearch() {
   } else if (!$domInLibrary && ($noMessage.className === 'not-in-library')) {
     $noMessage.className = 'hidden';
     $inLibraryDiv.className = 'in-library';
+    $searchArea.reset();
   }
 }
 
 var $inLibraryDiv = document.querySelector('.in-library');
-var $iconBtn = document.querySelector('#search-icon');
 var $addBtn = document.querySelector('.addition-button');
-$iconBtn.addEventListener('click', initiateSearch);
+var $searchArea = document.querySelector('#search-area');
+var $searchForm = document.querySelector('.search-form');
+$searchForm.addEventListener('submit', initiateSearch);
 function initiateSearch(event) {
+  event.preventDefault();
   nextSearch();
   var matchFound = false;
   $valueOfSearch = document.querySelector('#search-area').value;
@@ -82,6 +85,7 @@ function initiateSearch(event) {
     $noMessage.className = 'not-in-library';
     $inLibraryDiv.className = 'hidden';
   }
+  $searchForm.reset();
 }
 
 var $hamburgerBtn = document.getElementById('hamburger-button');
@@ -210,6 +214,7 @@ function viewFavorites() {
   $levels.className = 'hidden';
   $emptyList.className = '.empty-favorites';
 }
+
 $add.addEventListener('click', renderDigimon);
 function renderDigimon() {
 
