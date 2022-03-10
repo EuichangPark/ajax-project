@@ -19,6 +19,10 @@ ul {
   display: flex;
 }
 
+h3 {
+  margin-top: 50px;
+}
+
 .nav-item {
   text-decoration: none;
   list-style-type: none;
@@ -36,13 +40,21 @@ ul {
   margin-top: 1rem;
 }
 
+#hamburger-button {
+  width: 30px;
+  height: 30px;
+  background-color: #043d94;
+  color: #cbe6ff;
+  border-radius: 4px;
+}
+
 #hamburger {
   max-width: 100%;
 }
 
 img {
   width: 500px;
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 15px;
   background-clip: padding-box;
   background-color: #cbe6ff;
@@ -104,4 +116,52 @@ button:hover {
 
 .search-img-result {
   margin-top: 0;
+}
+
+.menu-item {
+  text-decoration: none;
+  list-style-type: none;
+  background-color: rgb(211, 234, 255);
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+  color: rgb(117, 116, 124);
+}
+
+.level {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.level-btn {
+  border-radius: 4px;
+  border: #043d94 solid 1px;
+  background-color: #cbe6ff;
+  font-family: Tomorrow, sans-serif;
+  font-weight: 500;
+}
+
+.level-btn:hover {
+  background-color: rgb(189, 189, 189);
+}
+
+.level-btn:active {
+  color: #043d94;
+  font-weight: 900;
+}
+
+.empty-favorites {
+  display: flex;
+  justify-content: center;
+}
+
+.add-button {
+  background-color: #043d94;
+  color: #cbe6ff;
+  border-radius: 3px;
+}
+
+.add-button:hover {
+  background-color: #cbe6ff;
+  color: #043d94;
 }

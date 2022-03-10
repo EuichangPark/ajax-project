@@ -15,14 +15,25 @@
     <div class="header">
       <h1>Digimon Dictionary</h1>
       <ul class="navbar">
-        <li class="nav-item">Favorites</li>
+        <li class="nav-item" id="favorites-nav">Favorites</li>
         <li class="nav-item" id="search-nav">Search</li>
       </ul>
     </div>
 
     <div class="hamburger-menu">
-      <i id="hamburger" class="fas fa-bars "></i>
+      <button type="button" id="hamburger-button">
+        <i id="hamburger" class="fas fa-bars "></i>
+      </button>
     </div>
+
+    <div class="slide-menu hidden view">
+      <ul>
+        <li class="menu-item">Favorites</li>
+        <li class="menu-item" id="ham-search">Search</li>
+      </ul>
+    </div>
+
+
   </header>
 
   <main>
@@ -35,17 +46,33 @@
         <h2 class="no-message">Searched Digimon doesn't exist. Search again.</h2>
       </div>
 
-      <div class="row search-box hidden">
-        <input id="search-area" type="text" placeholder="Search by Digimon Name"/>
-        <div class="search-button">
-          <button type="button" id="search-icon">
-            <i class="fas fa-search mag-glass"></i>
-          </button>
+      <form class="search-form">
+        <div class="row search-box hidden">
+          <input id="search-area" type="text" placeholder="Search by Digimon Name"/>
+          <div class="search-button">
+            <button id="search-icon">
+              <i class="fas fa-search mag-glass"></i>
+            </button>
+          </div>
         </div>
+      </form>
+
+      <div class="level hidden">
+        <button class="level-btn" id="in-training">In Training</button>
+        <button class="level-btn" id="rookie">Rookie</button>
+        <button class="level-btn" id="champion">Champion</button>
+        <button class="level-btn" id="ultimate">Ultimate</button>
+        <button class="level-btn" id="mega">Mega</button>
       </div>
 
       <div class="row in-library">
+        <div class="addition-button hidden view">
+          <button class="add-button" type="button">ADD</button>
+        </div>
+      </div>
 
+      <div class="row empty-favorites hidden">
+        <h2>No Digimon added</h2>
       </div>
     </div>
   </main>
