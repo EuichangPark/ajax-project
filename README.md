@@ -14,6 +14,7 @@ A dynamic HTML, CSS, and JavaScript solo project for kids who want to search dig
 - Kids can search digimon by their names.
 - Kids can search for digimons by their levels.
 - Kids can save their favorite digimons.
+- Kids can delete a digimona from their favorites list.
 
 ## Development
 
